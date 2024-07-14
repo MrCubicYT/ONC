@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 import java.util.stream.IntStream;
 
 public class OxygenBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public OxygenBlockEntity(BlockPos position, BlockState state) {
