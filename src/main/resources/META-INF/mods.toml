@@ -22,6 +22,12 @@ authors="Elliot, MCreator"
 
 
 [[dependencies.oxygen_not_crafted]]
+    modId="ldlib_api"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oxygen_not_crafted]]
     modId="photon_api"
     mandatory=false
     versionRange="[0,)"

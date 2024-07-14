@@ -32,40 +32,16 @@
       "path": "~/Effects"
     },
     {
-      "name": "Killmeplease",
+      "name": "GasNavigation",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "oxygentick",
+      "registry_name": "gas_navigation",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/oxygennotcrafted/procedures/KillmepleaseProcedure.java"
+          "src/main/java/net/mcreator/oxygennotcrafted/procedures/GasNavigationProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "Loaded",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "loaded",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/oxygennotcrafted/procedures/LoadedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     }
@@ -112,6 +88,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "ldlib_api",
       "photon_api"
     ],
     "currentGenerator": "forge-1.20.1",

@@ -6,6 +6,7 @@ import org.checkerframework.checker.units.qual.s;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
@@ -32,23 +34,28 @@ public class OxygenBlock extends Block implements SimpleWaterloggedBlock, Entity
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public OxygenBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.GRAVEL).strength(1f, 10f).lightLevel(s -> 1).noCollission().noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
+		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.GRAVEL).strength(1f, 10f).lightLevel(s -> 1).noCollission().noOcclusion().randomTicks().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
 	@Override
+	public boolean skipRendering(BlockState state, BlockState adjacentBlockState, Direction side) {
+		return adjacentBlockState.getBlock() == this ? true : super.skipRendering(state, adjacentBlockState, side);
+	}
+
+	@Override
+	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+		return state.getFluidState().isEmpty();
+	}
+
+	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+		return 0;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
 	}
 
@@ -79,6 +86,11 @@ public class OxygenBlock extends Block implements SimpleWaterloggedBlock, Entity
 	@Override
 	public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
 		return context.getItemInHand().getItem() != this.asItem();
+	}
+
+	@Override
+	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
+		return BlockPathTypes.OPEN;
 	}
 
 	@Override

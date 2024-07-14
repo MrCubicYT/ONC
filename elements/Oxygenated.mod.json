@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Oxygenated",
-    "icon": "oxygenussy.png",
+    "icon": "oxygenated.png",
     "color": {
       "value": -5177358,
       "falpha": 0.0
