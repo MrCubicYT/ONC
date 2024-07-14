@@ -3,7 +3,7 @@
     {
       "name": "Oxygen",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "oxygen",
       "metadata": {
@@ -21,7 +21,7 @@
     {
       "name": "Oxygenated",
       "type": "potioneffect",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "oxygenated",
       "metadata": {
@@ -33,7 +33,7 @@
     {
       "name": "Killmeplease",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "killmeplease",
       "metadata": {
@@ -51,7 +51,7 @@
     {
       "name": "OxygenatedEffectStartedapplied",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "oxygenated_effect_startedapplied",
       "metadata": {
@@ -69,7 +69,7 @@
     {
       "name": "Loaded",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "loaded",
       "metadata": {
@@ -93,7 +93,9 @@
     ]
   },
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.oxygen_not_crafted.oxygen": "Oxygen"
+    }
   },
   "foldersRoot": {
     "name": "~",
