@@ -3,42 +3,35 @@ package net.mcreator.oxygennotcrafted.block;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.oxygennotcrafted.procedures.GasNavigationProcedure;
-import net.mcreator.oxygennotcrafted.block.entity.OxygenBlockEntity;
 
-public class OxygenBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
+public class OxygenBlock extends Block implements SimpleWaterloggedBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public OxygenBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.EMPTY).strength(1f, 10f).lightLevel(s -> 1).noCollission().noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
-				.isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.EMPTY).strength(1f, 10f).lightLevel(s -> 1).noCollission().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
@@ -55,11 +48,6 @@ public class OxygenBlock extends Block implements SimpleWaterloggedBlock, Entity
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
-	}
-
-	@Override
-	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return Shapes.empty();
 	}
 
 	@Override
@@ -99,7 +87,7 @@ public class OxygenBlock extends Block implements SimpleWaterloggedBlock, Entity
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.scheduleTick(pos, this, 10);
+		world.scheduleTick(pos, this, 4);
 	}
 
 	@Override
@@ -108,25 +96,7 @@ public class OxygenBlock extends Block implements SimpleWaterloggedBlock, Entity
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		GasNavigationProcedure.execute(world, x, y, z, blockstate);
-		world.scheduleTick(pos, this, 10);
-	}
-
-	@Override
-	public MenuProvider getMenuProvider(BlockState state, Level worldIn, BlockPos pos) {
-		BlockEntity tileEntity = worldIn.getBlockEntity(pos);
-		return tileEntity instanceof MenuProvider menuProvider ? menuProvider : null;
-	}
-
-	@Override
-	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new OxygenBlockEntity(pos, state);
-	}
-
-	@Override
-	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
-		super.triggerEvent(state, world, pos, eventID, eventParam);
-		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		GasNavigationProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 4);
 	}
 }

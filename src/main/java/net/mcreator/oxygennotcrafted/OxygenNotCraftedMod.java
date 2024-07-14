@@ -21,7 +21,6 @@ import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModTabs;
 import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModMobEffects;
 import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModItems;
 import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModBlocks;
-import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -44,7 +43,7 @@ public class OxygenNotCraftedMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		OxygenNotCraftedModBlocks.REGISTRY.register(bus);
-		OxygenNotCraftedModBlockEntities.REGISTRY.register(bus);
+
 		OxygenNotCraftedModItems.REGISTRY.register(bus);
 
 		OxygenNotCraftedModTabs.REGISTRY.register(bus);
