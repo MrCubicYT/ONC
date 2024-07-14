@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "oxygen_not_crafted:block/oxygen"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "oxygen_not_crafted:block/oxygen",
+    "particle": "oxygen_not_crafted:block/oxygen"
+  },
+  "render_type": "translucent"
+}

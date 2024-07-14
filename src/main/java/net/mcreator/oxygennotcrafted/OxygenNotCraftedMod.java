@@ -17,6 +17,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModItems;
+import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModBlocks;
+import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModBlockEntities;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -36,6 +40,10 @@ public class OxygenNotCraftedMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		OxygenNotCraftedModBlocks.REGISTRY.register(bus);
+		OxygenNotCraftedModBlockEntities.REGISTRY.register(bus);
+		OxygenNotCraftedModItems.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

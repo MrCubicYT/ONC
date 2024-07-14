@@ -1,14 +1,44 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Oxygen",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/oxygen_not_crafted/blockstates/oxygen.json",
+          "src/main/resources/assets/oxygen_not_crafted/models/block/oxygen.json",
+          "src/main/java/net/mcreator/oxygennotcrafted/block/entity/OxygenBlockEntity.java",
+          "src/main/resources/data/oxygen_not_crafted/loot_tables/blocks/oxygen.json",
+          "src/main/resources/assets/oxygen_not_crafted/models/item/oxygen.json",
+          "src/main/java/net/mcreator/oxygennotcrafted/block/OxygenBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Oxygen"
+    ]
+  },
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.oxygen_not_crafted.oxygen": "Oxygen"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Blocks",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "oxygen_not_crafted",
