@@ -42,7 +42,7 @@
     "hasGravity": false,
     "isWaterloggable": true,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:ONCCreativeTab"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -59,7 +59,7 @@
       "value": "CLOTH"
     },
     "tickRate": 10,
-    "tickRandomly": true,
+    "tickRandomly": false,
     "isReplaceable": true,
     "canProvidePower": false,
     "emittedRedstonePower": {
@@ -81,7 +81,7 @@
     "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "EMPTY"
     },
     "breakSound": {
       "value": ""
@@ -119,6 +119,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "GasNavigation"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

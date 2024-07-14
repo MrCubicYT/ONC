@@ -17,6 +17,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModTabs;
 import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModMobEffects;
 import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModItems;
 import net.mcreator.oxygennotcrafted.init.OxygenNotCraftedModBlocks;
@@ -45,6 +46,8 @@ public class OxygenNotCraftedMod {
 		OxygenNotCraftedModBlocks.REGISTRY.register(bus);
 		OxygenNotCraftedModBlockEntities.REGISTRY.register(bus);
 		OxygenNotCraftedModItems.REGISTRY.register(bus);
+
+		OxygenNotCraftedModTabs.REGISTRY.register(bus);
 
 		OxygenNotCraftedModMobEffects.REGISTRY.register(bus);
 

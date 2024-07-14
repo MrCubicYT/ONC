@@ -3,6 +3,7 @@
     {
       "name": "Oxygen",
       "type": "block",
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "oxygen",
@@ -21,6 +22,7 @@
     {
       "name": "Oxygenated",
       "type": "potioneffect",
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "oxygenated",
@@ -34,6 +36,7 @@
     {
       "name": "GasNavigation",
       "type": "procedure",
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gas_navigation",
@@ -41,9 +44,41 @@
         "files": [
           "src/main/java/net/mcreator/oxygennotcrafted/procedures/GasNavigationProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "ONCCreativeTab",
+      "type": "tab",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "onc_creative_tab",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [],
@@ -56,6 +91,7 @@
   "language_map": {
     "en_us": {
       "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
+      "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
       "block.oxygen_not_crafted.oxygen": "Oxygen"
     }
   },
