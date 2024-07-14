@@ -1,10 +1,79 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Oxygenated",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygenated",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/oxygennotcrafted/potion/OxygenatedMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "Killmeplease",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killmeplease",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/oxygennotcrafted/procedures/KillmepleaseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Loaded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loaded",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/oxygennotcrafted/procedures/LoadedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OxygenatedEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygenated_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/oxygennotcrafted/procedures/OxygenatedEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "effect.oxygen_not_crafted.oxygenated": "Oxygenated"
+    }
   },
   "foldersRoot": {
     "name": "~",
