@@ -28,7 +28,8 @@
         "files": [
           "src/main/java/net/mcreator/oxygennotcrafted/potion/OxygenatedMobEffect.java"
         ]
-      }
+      },
+      "path": "~/Effects"
     },
     {
       "name": "Killmeplease",
@@ -46,7 +47,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "OxygenatedEffectStartedapplied",
@@ -64,7 +66,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "Loaded",
@@ -82,7 +85,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
@@ -102,6 +106,14 @@
     "children": [
       {
         "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Effects",
+        "children": []
+      },
+      {
+        "name": "Procedures",
         "children": []
       }
     ]
