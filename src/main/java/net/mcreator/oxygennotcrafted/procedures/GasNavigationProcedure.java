@@ -7,7 +7,15 @@ import net.minecraft.core.BlockPos;
 
 public class GasNavigationProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
-		world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
-		world.setBlock(BlockPos.containing(x + Math.random(), y + Math.random(), z + Math.random()), blockstate, 3);
+		double rx = 0;
+		double ry = 0;
+		double rz = 0;
+		rx = x + Math.random();
+		ry = y + Math.random();
+		rz = z + Math.random();
+		if (blockstate.canSurvive(world, BlockPos.containing(rx, ry, rz))) {
+			world.setBlock(BlockPos.containing(rx, ry, rz), blockstate, 3);
+			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+		}
 	}
 }
