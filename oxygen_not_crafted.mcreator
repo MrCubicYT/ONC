@@ -3,7 +3,7 @@
     {
       "name": "Oxygen",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "oxygen",
       "metadata": {
@@ -21,19 +21,20 @@
     {
       "name": "Oxygenated",
       "type": "potioneffect",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "oxygenated",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/oxygennotcrafted/potion/OxygenatedMobEffect.java"
         ]
-      }
+      },
+      "path": "~/Effects"
     },
     {
       "name": "Killmeplease",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "killmeplease",
       "metadata": {
@@ -46,12 +47,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "OxygenatedEffectStartedapplied",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "oxygenated_effect_startedapplied",
       "metadata": {
@@ -64,12 +66,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "Loaded",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "loaded",
       "metadata": {
@@ -82,7 +85,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
@@ -102,6 +106,14 @@
     "children": [
       {
         "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Effects",
+        "children": []
+      },
+      {
+        "name": "Procedures",
         "children": []
       }
     ]
