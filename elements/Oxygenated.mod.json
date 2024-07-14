@@ -13,8 +13,8 @@
     "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "onStarted": {
-      "name": "OxygenatedEffectStartedapplied"
+    "onActiveTick": {
+      "name": "Killmeplease"
     }
   }
 }

@@ -2,9 +2,10 @@
 package net.mcreator.oxygennotcrafted.potion;
 
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
+
+import net.mcreator.oxygennotcrafted.procedures.KillmepleaseProcedure;
 
 public class OxygenatedMobEffect extends MobEffect {
 	public OxygenatedMobEffect() {
@@ -17,8 +18,8 @@ public class OxygenatedMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyInstantenousEffect(Entity source, Entity indirectSource, LivingEntity entity, int amplifier, double health) {
-		OxygenatedEffectStartedappliedProcedure.execute();
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		KillmepleaseProcedure.execute(entity);
 	}
 
 	@Override
