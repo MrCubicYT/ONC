@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "onc:block/invis",
+    "up": "onc:block/invis",
+    "north": "onc:block/invis",
+    "east": "onc:block/invis",
+    "south": "onc:block/invis",
+    "west": "onc:block/invis",
+    "particle": "onc:block/invis"
+  },
+  "render_type": "translucent"
+}

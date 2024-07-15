@@ -151,6 +151,105 @@
         ]
       },
       "path": "~/Blocks"
+    },
+    {
+      "name": "ShineBugs",
+      "type": "livingentity",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shine_bugs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/onc/models/item/shine_bugs_spawn_egg.json",
+          "src/main/java/net/mcreator/onc/entity/ShineBugsEntity.java",
+          "src/main/resources/data/onc/forge/biome_modifier/shine_bugs_biome_modifier.json",
+          "src/main/java/net/mcreator/onc/client/renderer/ShineBugsRenderer.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ShinerOnTickUpdate",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiner_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/procedures/ShinerOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "Shiner",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/onc/blockstates/shiner.json",
+          "src/main/resources/assets/onc/models/block/shiner.json",
+          "src/main/java/net/mcreator/onc/block/ShinerBlock.java",
+          "src/main/resources/data/onc/loot_tables/blocks/shiner.json",
+          "src/main/resources/assets/onc/models/item/shiner.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ShineBugsOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shine_bugs_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/procedures/ShineBugsOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks"
     }
   ],
   "variable_elements": [
@@ -170,20 +269,24 @@
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Shiner",
       "~CUSTOM:Oxygen"
     ]
   },
   "language_map": {
     "en_us": {
-      "gamerule.gravity": "Gravity",
+      "block.onc.shiner": "Shiner",
+      "item.onc.shine_bugs_spawn_egg": "Shine Bugs Spawn Egg",
       "block.onc.basic_tile": "Basic Tile",
+      "block.onc.airflow_tile": "Airflow Tile",
+      "block.onc.oxygen": "Oxygen",
+      "gamerule.gravity": "Gravity",
+      "entity.onc.shine_bugs": "Shine Bugs",
       "effect.onc.oxygenated": "Oxygenated",
       "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
-      "block.onc.airflow_tile": "Airflow Tile",
       "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
       "gamerule.gravity.description": "Change the gravity that gases and the player will conform too (10 is normal)",
       "item_group.onc.onc_creative_tab": "ONC Creative Tab",
-      "block.onc.oxygen": "Oxygen",
       "block.oxygen_not_crafted.oxygen": "Oxygen"
     }
   },
