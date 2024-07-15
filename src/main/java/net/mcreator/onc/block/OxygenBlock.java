@@ -110,7 +110,7 @@ public class OxygenBlock extends Block implements SimpleWaterloggedBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		GasNavigationProcedure.execute(world, x, y, z);
+		GasNavigationProcedure.execute(world, x, y, z, blockstate);
 		world.scheduleTick(pos, this, 4);
 	}
 }

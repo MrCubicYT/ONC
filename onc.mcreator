@@ -9,11 +9,11 @@
       "registry_name": "oxygen",
       "metadata": {
         "files": [
-          "src/main/resources/data/onc/loot_tables/blocks/oxygen.json",
-          "src/main/resources/assets/onc/blockstates/oxygen.json",
           "src/main/java/net/mcreator/onc/block/OxygenBlock.java",
-          "src/main/resources/assets/onc/models/item/oxygen.json",
-          "src/main/resources/assets/onc/models/block/oxygen.json"
+          "src/main/resources/assets/onc/blockstates/oxygen.json",
+          "src/main/resources/data/onc/loot_tables/blocks/oxygen.json",
+          "src/main/resources/assets/onc/models/block/oxygen.json",
+          "src/main/resources/assets/onc/models/item/oxygen.json"
         ]
       },
       "path": "~/Blocks"
@@ -44,6 +44,10 @@
           "src/main/java/net/mcreator/onc/procedures/GasNavigationProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
           {
             "name": "x",
             "type": "number"
@@ -86,10 +90,59 @@
         "files": [],
         "type": "number"
       },
-      "path": "~/Gamerule"
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "GasDensity",
+      "type": "command",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gas_density",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/command/GasDensityCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "OxygenDC",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_dc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/procedures/OxygenDCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "oxygendensity",
+      "type": "number",
+      "scope": "world",
+      "value": "1.43"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:replaceable": [
@@ -124,8 +177,17 @@
         "children": []
       },
       {
-        "name": "Gamerule",
+        "name": "Gamerules",
         "children": []
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Command Procedures",
+            "children": []
+          }
+        ]
       }
     ]
   },

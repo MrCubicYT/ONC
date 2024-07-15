@@ -1,0 +1,10 @@
+{
+  "_fv": 60,
+  "_type": "command",
+  "definition": {
+    "commandName": "gasdensity",
+    "type": "STANDARD",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">oxygen</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">density</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OxygenDC</field></block></statement></block></statement></block></next></block></xml>"
+  }
+}
