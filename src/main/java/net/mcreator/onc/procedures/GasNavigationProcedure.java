@@ -6,6 +6,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.onc.init.OncModGameRules;
 import net.mcreator.onc.init.OncModBlocks;
 
 public class GasNavigationProcedure {
@@ -18,25 +19,28 @@ public class GasNavigationProcedure {
 		double diffx = 0;
 		double diffz = 0;
 		double rzinverse = 0;
-		double zup = 0;
-		double zdown = 0;
-		double xup = 0;
-		double xdown = 0;
-		diffx = Mth.nextInt(RandomSource.create(), -1, 1);
-		if (diffx == 0) {
-			diffz = Mth.nextInt(RandomSource.create(), -1, 1);
-		} else {
-			diffz = 0;
+		double diffy = 0;
+		double densitytgravity = 0;
+		while (diffx == 0 && diffz == 0 && diffy == 0) {
+			rand = Mth.nextInt(RandomSource.create(), 1, 3);
+			if (rand == 1) {
+				diffz = Mth.nextInt(RandomSource.create(), -1, 1);
+			} else if (rand == 2) {
+				diffx = Mth.nextInt(RandomSource.create(), -1, 1);
+			} else {
+				densitytgravity = 1.43 * (world.getLevelData().getGameRules().getInt(OncModGameRules.GRAVITY));
+				if (densitytgravity > Mth.nextInt(RandomSource.create(), 0, (int) (Math.ceil(densitytgravity / 10) * 10))) {
+					diffy = Mth.nextInt(RandomSource.create(), 0, 1);
+				} else {
+					diffy = Mth.nextInt(RandomSource.create(), -1, 0);
+				}
+			}
 		}
 		rx = x + diffx;
-		rz = z + diffz;
+		rz = z + diffx;
+		ry = y + diffy;
 		rxinverse = x + diffx * (-1);
 		rzinverse = z + diffz * (-1);
-		ry = y + 1;
-		zup = z + 1;
-		zdown = z - 1;
-		xup = x + 1;
-		xdown = x - 1;
 		if ((world.getBlockState(BlockPos.containing(rx, ry, rz))).getBlock() == Blocks.AIR) {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			world.setBlock(BlockPos.containing(rx, ry, rz), OncModBlocks.OXYGEN.get().defaultBlockState(), 3);

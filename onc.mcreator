@@ -74,6 +74,19 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "Gravity",
+      "type": "gamerule",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Gamerule"
     }
   ],
   "variable_elements": [],
@@ -85,9 +98,11 @@
   },
   "language_map": {
     "en_us": {
+      "gamerule.gravity": "Gravity",
       "effect.onc.oxygenated": "Oxygenated",
       "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
       "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
+      "gamerule.gravity.description": "Change the gravity that gases and the player will conform too (10 is normal)",
       "item_group.onc.onc_creative_tab": "ONC Creative Tab",
       "block.onc.oxygen": "Oxygen",
       "block.oxygen_not_crafted.oxygen": "Oxygen"
@@ -106,6 +121,10 @@
       },
       {
         "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Gamerule",
         "children": []
       }
     ]

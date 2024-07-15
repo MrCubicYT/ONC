@@ -1,7 +1,9 @@
 {
+  "gamerule.gravity": "Gravity",
   "effect.onc.oxygenated": "Oxygenated",
   "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
   "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
+  "gamerule.gravity.description": "Change the gravity that gases and the player will conform too (10 is normal)",
   "item_group.onc.onc_creative_tab": "ONC Creative Tab",
   "block.onc.oxygen": "Oxygen",
   "block.oxygen_not_crafted.oxygen": "Oxygen"
