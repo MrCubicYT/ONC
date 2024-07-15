@@ -21,14 +21,18 @@ public class GasNavigationProcedure {
 		double rzinverse = 0;
 		double diffy = 0;
 		double densitytgravity = 0;
+		densitytgravity = 1.43 * (world.getLevelData().getGameRules().getInt(OncModGameRules.GRAVITY));
 		while (diffx == 0 && diffz == 0 && diffy == 0) {
 			rand = Mth.nextInt(RandomSource.create(), 1, 3);
 			if (rand == 1) {
 				diffz = Mth.nextInt(RandomSource.create(), -1, 1);
-			} else if (rand == 2) {
-				diffx = Mth.nextInt(RandomSource.create(), -1, 1);
+				if (densitytgravity > Mth.nextInt(RandomSource.create(), 0, (int) (Math.ceil(densitytgravity / 10) * 10))) {
+					diffy = Mth.nextInt(RandomSource.create(), 0, 1);
+				} else {
+					diffy = Mth.nextInt(RandomSource.create(), -1, 0);
+				}
 			} else {
-				densitytgravity = 1.43 * (world.getLevelData().getGameRules().getInt(OncModGameRules.GRAVITY));
+				diffx = Mth.nextInt(RandomSource.create(), -1, 1);
 				if (densitytgravity > Mth.nextInt(RandomSource.create(), 0, (int) (Math.ceil(densitytgravity / 10) * 10))) {
 					diffy = Mth.nextInt(RandomSource.create(), 0, 1);
 				} else {
@@ -48,9 +52,9 @@ public class GasNavigationProcedure {
 			if (diffx == 0) {
 				rand = Mth.nextInt(RandomSource.create(), 1, 3);
 				if (rand == 1) {
-					if ((world.getBlockState(BlockPos.containing(x, ry, rzinverse))).getBlock() == Blocks.AIR) {
+					if ((world.getBlockState(BlockPos.containing(x, y, rzinverse))).getBlock() == Blocks.AIR) {
 						world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
-						world.setBlock(BlockPos.containing(x, ry, rzinverse), OncModBlocks.OXYGEN.get().defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y, rzinverse), OncModBlocks.OXYGEN.get().defaultBlockState(), 3);
 					} else {
 						rand = Mth.nextInt(RandomSource.create(), 1, 2);
 						if (rand == 1) {
