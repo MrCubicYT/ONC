@@ -9,11 +9,11 @@
       "registry_name": "oxygen",
       "metadata": {
         "files": [
-          "src/main/resources/assets/oxygen_not_crafted/blockstates/oxygen.json",
-          "src/main/resources/assets/oxygen_not_crafted/models/block/oxygen.json",
-          "src/main/resources/data/oxygen_not_crafted/loot_tables/blocks/oxygen.json",
-          "src/main/resources/assets/oxygen_not_crafted/models/item/oxygen.json",
-          "src/main/java/net/mcreator/oxygennotcrafted/block/OxygenBlock.java"
+          "src/main/resources/data/onc/loot_tables/blocks/oxygen.json",
+          "src/main/resources/assets/onc/blockstates/oxygen.json",
+          "src/main/java/net/mcreator/onc/block/OxygenBlock.java",
+          "src/main/resources/assets/onc/models/item/oxygen.json",
+          "src/main/resources/assets/onc/models/block/oxygen.json"
         ]
       },
       "path": "~/Blocks"
@@ -27,7 +27,7 @@
       "registry_name": "oxygenated",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/oxygennotcrafted/potion/OxygenatedMobEffect.java"
+          "src/main/java/net/mcreator/onc/potion/OxygenatedMobEffect.java"
         ]
       },
       "path": "~/Effects"
@@ -41,7 +41,7 @@
       "registry_name": "gas_navigation",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/oxygennotcrafted/procedures/GasNavigationProcedure.java"
+          "src/main/java/net/mcreator/onc/procedures/GasNavigationProcedure.java"
         ],
         "dependencies": [
           {
@@ -85,8 +85,11 @@
   },
   "language_map": {
     "en_us": {
+      "effect.onc.oxygenated": "Oxygenated",
       "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
       "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
+      "item_group.onc.onc_creative_tab": "ONC Creative Tab",
+      "block.onc.oxygen": "Oxygen",
       "block.oxygen_not_crafted.oxygen": "Oxygen"
     }
   },
@@ -108,10 +111,11 @@
     ]
   },
   "workspaceSettings": {
-    "modid": "oxygen_not_crafted",
-    "modName": "oxygen not crafted",
+    "modid": "onc",
+    "modName": "Oxygen Not Crafted",
     "version": "1.0.0",
-    "author": "Elliot, MCreator",
+    "description": "No more breathing in the void!",
+    "author": "Cubic, Elliot",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
     "serverSideOnly": false,
@@ -123,8 +127,8 @@
       "photon_api"
     ],
     "currentGenerator": "forge-1.20.1",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.mcreator.oxygennotcrafted"
+    "credits": "MCreator, Elliot, Cubic",
+    "modElementsPackage": "net.mcreator.onc"
   },
   "mcreatorVersion": 202400118518
 }

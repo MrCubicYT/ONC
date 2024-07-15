@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "oxygen_not_crafted:blocks/oxygen",
+  "random_sequence": "onc:blocks/oxygen",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oxygen_not_crafted:oxygen"
+          "name": "onc:oxygen"
         }
       ]
     }

@@ -1,5 +1,8 @@
 {
+  "effect.onc.oxygenated": "Oxygenated",
   "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
   "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
+  "item_group.onc.onc_creative_tab": "ONC Creative Tab",
+  "block.onc.oxygen": "Oxygen",
   "block.oxygen_not_crafted.oxygen": "Oxygen"
 }

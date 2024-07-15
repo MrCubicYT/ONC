@@ -1,5 +1,5 @@
 {
-  "parent": "oxygen_not_crafted:block/oxygen",
+  "parent": "onc:block/oxygen",
   "display": {
     "thirdperson": {
       "rotation": [
