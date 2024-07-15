@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "onc:block/gastile",
+    "up": "onc:block/gastile",
+    "north": "onc:block/gastile",
+    "east": "onc:block/gastile",
+    "south": "onc:block/gastile",
+    "west": "onc:block/gastile",
+    "particle": "onc:block/gastile"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:raw_iron"
+    }
+  },
+  "result": {
+    "item": "onc:basic_tile",
+    "count": 1
+  }
+}

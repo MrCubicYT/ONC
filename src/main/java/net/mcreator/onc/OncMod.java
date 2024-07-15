@@ -20,6 +20,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.mcreator.onc.init.OncModTabs;
 import net.mcreator.onc.init.OncModMobEffects;
 import net.mcreator.onc.init.OncModItems;
+import net.mcreator.onc.init.OncModEntities;
 import net.mcreator.onc.init.OncModBlocks;
 
 import java.util.function.Supplier;
@@ -45,6 +46,7 @@ public class OncMod {
 		OncModBlocks.REGISTRY.register(bus);
 
 		OncModItems.REGISTRY.register(bus);
+		OncModEntities.REGISTRY.register(bus);
 
 		OncModTabs.REGISTRY.register(bus);
 

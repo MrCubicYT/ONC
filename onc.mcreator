@@ -9,11 +9,11 @@
       "registry_name": "oxygen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/onc/block/OxygenBlock.java",
-          "src/main/resources/assets/onc/blockstates/oxygen.json",
           "src/main/resources/data/onc/loot_tables/blocks/oxygen.json",
-          "src/main/resources/assets/onc/models/block/oxygen.json",
-          "src/main/resources/assets/onc/models/item/oxygen.json"
+          "src/main/resources/assets/onc/blockstates/oxygen.json",
+          "src/main/java/net/mcreator/onc/block/OxygenBlock.java",
+          "src/main/resources/assets/onc/models/item/oxygen.json",
+          "src/main/resources/assets/onc/models/block/oxygen.json"
         ]
       },
       "path": "~/Blocks"
@@ -44,10 +44,6 @@
           "src/main/java/net/mcreator/onc/procedures/GasNavigationProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
           {
             "name": "x",
             "type": "number"
@@ -90,21 +86,7 @@
         "files": [],
         "type": "number"
       },
-      "path": "~/Gamerules"
-    },
-    {
-      "name": "GasDensity",
-      "type": "command",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gas_density",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/onc/command/GasDensityCommand.java"
-        ]
-      },
-      "path": "~/Commands"
+      "path": "~/Gamerule"
     },
     {
       "name": "OxygenDC",
@@ -125,6 +107,48 @@
           {
             "name": "entity",
             "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "GasDensity",
+      "type": "command",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gas_density",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/command/GasDensityCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ShineBugsOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shine_bugs_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/procedures/ShineBugsOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -132,7 +156,138 @@
           }
         ]
       },
-      "path": "~/Commands/Command Procedures"
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ShinerOnTickUpdate",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiner_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/procedures/ShinerOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BasicTile",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_tile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/onc/models/item/basic_tile.json",
+          "src/main/resources/assets/onc/models/block/basic_tile.json",
+          "src/main/java/net/mcreator/onc/block/BasicTileBlock.java",
+          "src/main/resources/data/onc/loot_tables/blocks/basic_tile.json",
+          "src/main/resources/assets/onc/blockstates/basic_tile.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ShineBugs",
+      "type": "livingentity",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shine_bugs",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/forge/biome_modifier/shine_bugs_biome_modifier.json",
+          "src/main/java/net/mcreator/onc/client/renderer/ShineBugsRenderer.java",
+          "src/main/java/net/mcreator/onc/entity/ShineBugsEntity.java",
+          "src/main/resources/assets/onc/models/item/shine_bugs_spawn_egg.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "AirflowTile",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airflow_tile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/onc/models/item/airflow_tile.json",
+          "src/main/resources/assets/onc/models/block/airflow_tile.json",
+          "src/main/resources/data/onc/loot_tables/blocks/airflow_tile.json",
+          "src/main/resources/assets/onc/blockstates/airflow_tile.json",
+          "src/main/java/net/mcreator/onc/block/AirflowTileBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "Shiner",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/loot_tables/blocks/shiner.json",
+          "src/main/resources/assets/onc/models/block/shiner.json",
+          "src/main/resources/assets/onc/models/item/shiner.json",
+          "src/main/resources/assets/onc/blockstates/shiner.json",
+          "src/main/java/net/mcreator/onc/block/ShinerBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BasicREC",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_rec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/recipes/basic_rec.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "AirflowREC",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airflow_rec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/recipes/airflow_rec.json"
+        ]
+      },
+      "path": "~/Blocks"
     }
   ],
   "variable_elements": [
@@ -141,23 +296,41 @@
       "type": "number",
       "scope": "world",
       "value": "1.43"
+    },
+    {
+      "name": "stress",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "sadness",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Shiner",
       "~CUSTOM:Oxygen"
     ]
   },
   "language_map": {
     "en_us": {
+      "block.onc.shiner": "Shiner",
+      "item.onc.shine_bugs_spawn_egg": "Shine Bugs Spawn Egg",
+      "block.onc.basic_tile": "Basic Tile",
+      "block.onc.airflow_tile": "Airflow Tile",
+      "block.onc.oxygen": "Oxygen",
       "gamerule.gravity": "Gravity",
+      "entity.onc.shine_bugs": "Shine Bugs",
       "effect.onc.oxygenated": "Oxygenated",
       "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
       "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
       "gamerule.gravity.description": "Change the gravity that gases and the player will conform too (10 is normal)",
       "item_group.onc.onc_creative_tab": "ONC Creative Tab",
-      "block.onc.oxygen": "Oxygen",
       "block.oxygen_not_crafted.oxygen": "Oxygen"
     }
   },
@@ -165,11 +338,7 @@
     "name": "~",
     "children": [
       {
-        "name": "Blocks",
-        "children": []
-      },
-      {
-        "name": "Effects",
+        "name": "Gamerules",
         "children": []
       },
       {
@@ -177,7 +346,11 @@
         "children": []
       },
       {
-        "name": "Gamerules",
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Effects",
         "children": []
       },
       {
