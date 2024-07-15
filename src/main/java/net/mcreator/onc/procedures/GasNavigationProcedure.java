@@ -93,24 +93,28 @@ public class GasNavigationProcedure {
 								break;
 							}
 						} else if (rand == 2) {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(x, y, zd))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(x, y, zd), blockstate, 3);
 								break;
 							}
 						} else if (rand == 3) {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(x, y, zu))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(x, y, zu), blockstate, 3);
 								break;
 							}
 						} else if (rand == 4) {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(x, yd, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(x, yd, z), blockstate, 3);
 								break;
 							}
 						} else {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(x, yu, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(x, yu, z), blockstate, 3);
@@ -134,24 +138,28 @@ public class GasNavigationProcedure {
 								break;
 							}
 						} else if (rand == 2) {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(xd, y, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(xd, y, z), blockstate, 3);
 								break;
 							}
 						} else if (rand == 3) {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(xu, y, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(xu, y, z), blockstate, 3);
 								break;
 							}
 						} else if (rand == 4) {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(x, yd, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(x, yd, z), blockstate, 3);
 								break;
 							}
 						} else {
+							numeroloop.add(rand);
 							if ((world.getBlockState(BlockPos.containing(x, yu, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 								world.setBlock(BlockPos.containing(x, yu, z), blockstate, 3);
@@ -174,24 +182,28 @@ public class GasNavigationProcedure {
 							break;
 						}
 					} else if (rand == 2) {
+						numeroloop.add(rand);
 						if ((world.getBlockState(BlockPos.containing(xd, y, z))).getBlock() == Blocks.AIR) {
 							world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 							world.setBlock(BlockPos.containing(xd, y, z), blockstate, 3);
 							break;
 						}
 					} else if (rand == 3) {
+						numeroloop.add(rand);
 						if ((world.getBlockState(BlockPos.containing(xu, y, z))).getBlock() == Blocks.AIR) {
 							world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 							world.setBlock(BlockPos.containing(xu, y, z), blockstate, 3);
 							break;
 						}
 					} else if (rand == 4) {
+						numeroloop.add(rand);
 						if ((world.getBlockState(BlockPos.containing(x, y, zd))).getBlock() == Blocks.AIR) {
 							world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 							world.setBlock(BlockPos.containing(x, y, zd), blockstate, 3);
 							break;
 						}
 					} else {
+						numeroloop.add(rand);
 						if ((world.getBlockState(BlockPos.containing(x, y, zu))).getBlock() == Blocks.AIR) {
 							world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 							world.setBlock(BlockPos.containing(x, y, zu), blockstate, 3);
