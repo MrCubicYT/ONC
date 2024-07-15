@@ -73,6 +73,10 @@ public class GasNavigationProcedure {
 		rzinverse = z + diffz * (-1);
 		zd = z - 1;
 		zu = z + 1;
+		xd = x - 1;
+		xu = x + 1;
+		yd = y - 1;
+		yu = y + 1;
 		if ((world.getBlockState(BlockPos.containing(rx, ry, rz))).getBlock() == Blocks.AIR) {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			world.setBlock(BlockPos.containing(rx, ry, rz), blockstate, 3);
@@ -115,7 +119,7 @@ public class GasNavigationProcedure {
 						}
 					}
 				}
-				nonono.clear();
+				numeroloop.clear();
 			}
 		} else if (diffx == 0) {
 			if (diffy == 0) {
@@ -156,7 +160,7 @@ public class GasNavigationProcedure {
 						}
 					}
 				}
-				nonono.clear();
+				numeroloop.clear();
 			}
 		} else {
 			while (!numeroloop.contains(nonono)) {
@@ -196,7 +200,7 @@ public class GasNavigationProcedure {
 					}
 				}
 			}
-			nonono.clear();
+			numeroloop.clear();
 		}
 	}
 }

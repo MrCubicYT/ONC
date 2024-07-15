@@ -1,9 +1,12 @@
 package net.mcreator.onc.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.onc.init.OncModBlocks;
 
 public class ShineBugsOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		world.setBlock(BlockPos.containing(x, y, z), OncModItems.DELETED_MOD_ELEMENT.get().defaultBlockState(), 3);
+		world.setBlock(BlockPos.containing(x, y, z), OncModBlocks.SHINER.get().defaultBlockState(), 3);
 	}
 }

@@ -9,11 +9,11 @@
       "registry_name": "oxygen",
       "metadata": {
         "files": [
-          "src/main/resources/data/onc/loot_tables/blocks/oxygen.json",
-          "src/main/resources/assets/onc/blockstates/oxygen.json",
           "src/main/java/net/mcreator/onc/block/OxygenBlock.java",
-          "src/main/resources/assets/onc/models/item/oxygen.json",
-          "src/main/resources/assets/onc/models/block/oxygen.json"
+          "src/main/resources/assets/onc/blockstates/oxygen.json",
+          "src/main/resources/data/onc/loot_tables/blocks/oxygen.json",
+          "src/main/resources/assets/onc/models/block/oxygen.json",
+          "src/main/resources/assets/onc/models/item/oxygen.json"
         ]
       },
       "path": "~/Blocks"
@@ -44,6 +44,10 @@
           "src/main/java/net/mcreator/onc/procedures/GasNavigationProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
           {
             "name": "x",
             "type": "number"
@@ -86,7 +90,7 @@
         "files": [],
         "type": "number"
       },
-      "path": "~/Gamerule"
+      "path": "~/Gamerules"
     },
     {
       "name": "OxygenDC",
@@ -107,6 +111,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
