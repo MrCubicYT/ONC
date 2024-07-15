@@ -17,6 +17,8 @@ import net.mcreator.onc.OncMod;
 public class OncModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, OncMod.MODID);
 	public static final RegistryObject<Item> OXYGEN = block(OncModBlocks.OXYGEN);
+	public static final RegistryObject<Item> BASIC_TILE = block(OncModBlocks.BASIC_TILE);
+	public static final RegistryObject<Item> AIRFLOW_TILE = block(OncModBlocks.AIRFLOW_TILE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

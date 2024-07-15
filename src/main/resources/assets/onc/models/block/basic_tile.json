@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "onc:block/tile",
+    "up": "onc:block/tile",
+    "north": "onc:block/tile",
+    "east": "onc:block/tile",
+    "south": "onc:block/tile",
+    "west": "onc:block/tile",
+    "particle": "onc:block/tile"
+  },
+  "render_type": "solid"
+}

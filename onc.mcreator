@@ -87,9 +87,86 @@
         "type": "number"
       },
       "path": "~/Gamerule"
+    },
+    {
+      "name": "BasicTile",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_tile",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/loot_tables/blocks/basic_tile.json",
+          "src/main/resources/assets/onc/models/item/basic_tile.json",
+          "src/main/resources/assets/onc/blockstates/basic_tile.json",
+          "src/main/java/net/mcreator/onc/block/BasicTileBlock.java",
+          "src/main/resources/assets/onc/models/block/basic_tile.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BasicREC",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_rec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/recipes/basic_rec.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "AirflowTile",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airflow_tile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/onc/block/AirflowTileBlock.java",
+          "src/main/resources/data/onc/loot_tables/blocks/airflow_tile.json",
+          "src/main/resources/assets/onc/blockstates/airflow_tile.json",
+          "src/main/resources/assets/onc/models/block/airflow_tile.json",
+          "src/main/resources/assets/onc/models/item/airflow_tile.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "AirflowREC",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airflow_rec",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/onc/recipes/airflow_rec.json"
+        ]
+      },
+      "path": "~/Blocks"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "stress",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "sadness",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:replaceable": [
@@ -99,8 +176,10 @@
   "language_map": {
     "en_us": {
       "gamerule.gravity": "Gravity",
+      "block.onc.basic_tile": "Basic Tile",
       "effect.onc.oxygenated": "Oxygenated",
       "effect.oxygen_not_crafted.oxygenated": "Oxygenated",
+      "block.onc.airflow_tile": "Airflow Tile",
       "item_group.oxygen_not_crafted.onc_creative_tab": "ONC Creative Tab",
       "gamerule.gravity.description": "Change the gravity that gases and the player will conform too (10 is normal)",
       "item_group.onc.onc_creative_tab": "ONC Creative Tab",

@@ -19,5 +19,7 @@ public class OncModTabs {
 	public static final RegistryObject<CreativeModeTab> ONC_CREATIVE_TAB = REGISTRY.register("onc_creative_tab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.onc.onc_creative_tab")).icon(() -> new ItemStack(OncModBlocks.OXYGEN.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(OncModBlocks.OXYGEN.get().asItem());
+				tabData.accept(OncModBlocks.BASIC_TILE.get().asItem());
+				tabData.accept(OncModBlocks.AIRFLOW_TILE.get().asItem());
 			}).withSearchBar().build());
 }
